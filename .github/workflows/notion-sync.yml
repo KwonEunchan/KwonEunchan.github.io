@@ -1,0 +1,34 @@
+name: Sync Notion Posts → JSON
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/60 * * * *"   
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 
+
+      - name: Install deps
+        run: |
+          npm install @notionhq/client@2.2.10 notion-to-md
+
+      - name: Generate posts.json
+        run: node notion-to-json.js
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+
+      - name: Commit JSON
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add posts/posts.json || true
+          git commit -m "update posts.json" || echo "no changes"
+          git push
