@@ -28,7 +28,7 @@ async function generate() {
     url: item.url,
     summary: item.properties.Summary?.rich_text?.[0]?.plain_text ?? "",
     category: item.properties.Category?.select?.name ?? "",
-    state: item.properties.Clear?.select?.name ?? "",
+    state: item.properties.Clear?.status?.name ?? "",
     created_time: item.created_time,
   }));
 
