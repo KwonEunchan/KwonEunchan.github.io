@@ -1,9 +1,8 @@
-import posts from "../../data/posts.json";
+import posts from "@data/posts.json";
 import "../../styles/ContentList.scss";
 
 export default function ContentList({ selectedCategory, keyword }) {
 
-  // 🔥 한글 카테고리 → 영어 카테고리 매핑
   const categoryMap = {
     "전체": null,
     "문제해결": "Trouble Shooting",
@@ -19,10 +18,8 @@ export default function ContentList({ selectedCategory, keyword }) {
   const filtered = posts.filter((p) => {
     const mapped = categoryMap[selectedCategory];
 
-    // 🔥 카테고리 체크
     const matchCategory = !mapped || p.category === mapped;
 
-    // 🔥 검색어 체크 (title/summary null 안정 처리)
     const t = p.title || "";
     const s = p.summary || "";
 
@@ -67,3 +64,4 @@ export default function ContentList({ selectedCategory, keyword }) {
     </section>
   );
 }
+
