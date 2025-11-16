@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  background-color: white;
+
+  .header-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    height: 64px;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* 로고 영역 */
+    .logo {
+      width: 250px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .logo-icon {
+        width: 40px;
+      }
+
+      .logo-text {
+        font-family: "Momo Trust Display", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 24px;
+        color: #0F1A3A;
+      }
+    }
+  }
+}
+
+/* ---------------------------- */
+/*  모바일 (≤ 767px)          */
+/* ---------------------------- */
+@media (max-width: 767px) {
+  #header {
+    .header-inner {
+      padding: 0 16px;
+
+      .logo {
+        width: auto;
+
+        .logo-icon {
+          width: 32px;
+        }
+
+        .logo-text {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------- */
+/*  태블릿 (768px ~ 1023px)   */
+/* ---------------------------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #header {
+    .header-inner {
+      padding: 0 20px;
+
+      .logo {
+        width: auto;
+
+        .logo-icon {
+          width: 36px;
+        }
+
+        .logo-text {
+          font-size: 22px;
+        }
+      }
+
+    }
+  }
+}
