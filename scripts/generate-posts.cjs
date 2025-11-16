@@ -1,5 +1,11 @@
 const fs = require("fs");
+const path = require("path");
 const axios = require("axios");
+
+const dataDir = path.join(process.cwd(), "data");
+if (!fs.existsSync(dataDir)) {
+  fs.mkdirSync(dataDir);
+}
 
 const notionToken = process.env.NOTION_TOKEN;
 const databaseId = process.env.NOTION_DATABASE_ID;
@@ -26,9 +32,12 @@ async function generate() {
     created_time: item.created_time,
   }));
 
-  fs.writeFileSync("data/posts.json", JSON.stringify(posts, null, 2));
+  fs.writeFileSync(
+    path.join(dataDir, "posts.json"),
+    JSON.stringify(posts, null, 2)
+  );
+
   console.log("posts.json 생성 완료");
 }
-
 
 generate();
