@@ -1,7 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
 
 export default defineConfig({
+  base: "/",
   plugins: [react()],
-  base: '/', // GitHub Pages용 경로
-})
+  resolve: {
+    alias: {
+      "@data": path.resolve(__dirname, "data"),
+    },
+  },
+});
