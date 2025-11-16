@@ -24,7 +24,7 @@ async function generate() {
 
   const posts = res.data.results.map((item) => ({
     id: item.id,
-    title: item.properties.Name?.title?.[0]?.plain_text ?? "",
+    title: item.properties.Title?.title?.[0]?.plain_text ?? "",
     url: item.url,
     summary: item.properties.Summary?.rich_text?.[0]?.plain_text ?? "",
     category: item.properties.Category?.select?.name ?? "",
