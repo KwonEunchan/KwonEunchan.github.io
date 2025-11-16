@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import "../../styles/Banner.scss";
-import posts from "../../data/posts.json";
+import posts from "@data/posts.json";
 import bannerOutline from "../../assets/banner-outline.png";
 import profile from "../../assets/profile.png";
 
@@ -55,3 +55,4 @@ export default function Banner() {
     </section>
   );
 }
+
