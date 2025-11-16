@@ -30,4 +30,5 @@ async function generate() {
   console.log("posts.json 생성 완료");
 }
 
+
 generate();
