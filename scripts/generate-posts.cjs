@@ -31,6 +31,8 @@ async function generate() {
     state: item.properties.Clear?.status?.name ?? "",
     created_time: item.properties["Publish Date"]?.date?.start ?? ""
   }));
+  
+  posts.sort((a, b) => new Date(b.created_time) - new Date(a.created_time));
 
   fs.writeFileSync(
     path.join(dataDir, "posts.json"),
