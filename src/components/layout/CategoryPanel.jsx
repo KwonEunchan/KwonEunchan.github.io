@@ -3,18 +3,12 @@ import "../../styles/CategoryPanel.scss";
 
 export default function CategoryPanel({ onSelect, onSearch }) {
   const categories = [
-    { id: "전체", label: "전체" },
     { id: "문제해결", label: "문제해결" },
-    { id: "설계", label: "설계" },
-    { id: "운영", label: "운영" },
-    { id: "프로젝트", label: "프로젝트" },
     { id: "인사이트", label: "인사이트" },
-    { id: "학습", label: "학습" },
-    { id: "커리어", label: "커리어" },
-    { id: "데브옵스", label: "데브옵스" }
+    { id: "프로젝트", label: "프로젝트" }
   ];
 
-  const [active, setActive] = useState("전체");
+  const [active, setActive] = useState("문제해결");
   const [isFixed, setIsFixed] = useState(false);
   const [placeholderHeight, setPlaceholderHeight] = useState(0);
 
@@ -97,3 +91,4 @@ export default function CategoryPanel({ onSelect, onSearch }) {
     </section>
   );
 }
+
