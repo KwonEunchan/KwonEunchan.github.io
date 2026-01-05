@@ -53,6 +53,10 @@
           overflow: hidden;
           text-overflow: ellipsis;
           flex: 1;
+
+            @media (max-width: 600px) {
+              h3 { font-size: 16px; }
+            }
         }
       }
 
@@ -94,3 +98,4 @@
     }
   }
 }
+
