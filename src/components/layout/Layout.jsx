@@ -5,7 +5,7 @@ import CategoryPanel from "./CategoryPanel";
 import ContentList from "./ContentList";
 
 export default function Layout() {
-  const [category, setCategory] = useState("전체");
+  const [category, setCategory] = useState("문제해결");
   const [keyword, setKeyword] = useState("");
 
   return (
@@ -20,3 +20,4 @@ export default function Layout() {
     </div>
   );
 }
+
