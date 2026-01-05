@@ -9,21 +9,27 @@ export default function ContentList({ selectedCategory, keyword }) {
     "프로젝트": "Project"
   };
 
-  const filtered = posts.filter((p) => {
-    const mapped = categoryMap[selectedCategory];
+  const filtered = posts
+    .filter((p) => {
+      const mapped = categoryMap[selectedCategory];
+      const matchCategory = !mapped || p.category === mapped;
 
-    const matchCategory = !mapped || p.category === mapped;
+      const t = p.title || "";
+      const s = p.summary || "";
 
-    const t = p.title || "";
-    const s = p.summary || "";
+      const matchKeyword =
+        keyword.trim() === "" ||
+        t.includes(keyword) ||
+        s.includes(keyword);
 
-    const matchKeyword =
-      keyword.trim() === "" ||
-      t.includes(keyword) ||
-      s.includes(keyword);
-
-    return matchCategory && matchKeyword;
-  });
+      return matchCategory && matchKeyword;
+    })
+    // 🔥 여기에 정렬 로직 추가 (내림차순: 최신순)
+    .sort((a, b) => {
+      const dateA = new Date(a.created_time);
+      const dateB = new Date(b.created_time);
+      return dateB - dateA; // B에서 A를 빼면 양수일 때 B가 앞으로 옴 (내림차순)
+    });
 
   return (
     <section id="content-list">
@@ -31,7 +37,7 @@ export default function ContentList({ selectedCategory, keyword }) {
         <ul className="post-list">
           {filtered.map((p) => (
             <li key={p.id} className="post-item">
-              <a href={p.url} target="_blank">
+              <a href={p.url} target="_blank" rel="noreferrer">
 
                 <div className="post-title-row">
                   <h3>{p.title || "(제목 없음)"}</h3>
@@ -47,7 +53,8 @@ export default function ContentList({ selectedCategory, keyword }) {
                 <p>{p.summary}</p>
 
                 <div className="date">
-                  {p.published_date || p.created_time?.slice(0, 10)}
+                  {/* JSON 생성 시 날짜를 created_time에 넣어뒀으므로 이걸 우선 사용 */}
+                  {p.created_time ? p.created_time.slice(0, 10) : ""}
                 </div>
 
               </a>
@@ -58,5 +65,3 @@ export default function ContentList({ selectedCategory, keyword }) {
     </section>
   );
 }
-
-
