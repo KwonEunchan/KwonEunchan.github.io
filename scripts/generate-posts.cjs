@@ -39,7 +39,7 @@ async function generate() {
   summary: item.properties.Summary?.rich_text?.[0]?.plain_text ?? "",
   category: item.properties.Category?.select?.name ?? "",
   state: item.properties.Clear?.status?.name ?? "",
-  created_time: item.created_time,
+  created_time: item.properties["Publish Date"]?.date?.start ?? item.created_time,
 }));
 
   fs.writeFileSync(
