@@ -4,15 +4,9 @@ import "../../styles/ContentList.scss";
 export default function ContentList({ selectedCategory, keyword }) {
 
   const categoryMap = {
-    "전체": null,
     "문제해결": "Trouble Shooting",
-    "설계": "Design",
-    "운영": "Operation",
-    "프로젝트": "Project",
     "인사이트": "Insight",
-    "학습": "Study",
-    "커리어": "Career",
-    "데브옵스": "DevOps"
+    "프로젝트": "Project"
   };
 
   const filtered = posts.filter((p) => {
@@ -64,4 +58,5 @@ export default function ContentList({ selectedCategory, keyword }) {
     </section>
   );
 }
+
 
