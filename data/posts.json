@@ -12,7 +12,7 @@
     "id": "2a47af6d-bf98-801c-9ed0-c010b0010390",
     "title": "특정 시점 이후 모니터링 로그가 일체 조회되지 않는 현상",
     "url": "https://www.notion.so/2a47af6dbf98801c9ed0c010b0010390",
-    "summary": "서비스 자체는 정상적으로 수행되고 있으나, 특정 시점 이후에 관리자 화면에서 트랜잭션 수행 로그가 일체 조회되지 않음.",
+    "summary": "연결 유실 후 발생한 모니터링 로그 미적재 현상을 분석하여, 데이터 파싱 오류 수정 및 파일 포인터 재설정으로 복구한 사례",
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2023-05-04"
@@ -30,7 +30,7 @@
     "id": "2a47af6d-bf98-80b7-92ce-dd5fcb187e6d",
     "title": "대용량 전문 수신시 컨테이너 재기동되는 현상",
     "url": "https://www.notion.so/2a47af6dbf9880b792cedd5fcb187e6d",
-    "summary": "30MB 이상의 전문을 수신하면 간헐적으로 컨테이너가 재기동되는 현상이 지속적으로 발생하던 문제를 해결한 경험",
+    "summary": "대용량 전문 수신 시 발생한 OOM 원인을 힙 덤프로 분석하고, 로깅 최적화 및 G1GC 적용으로 해결한 사례",
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2023-01-17"
@@ -48,7 +48,7 @@
     "id": "2af7af6d-bf98-804b-b584-fbcdec7cec85",
     "title": "FCM 호출시 지속적으로 요청 실패하는 현상",
     "url": "https://www.notion.so/FCM-2af7af6dbf98804bb584fbcdec7cec85",
-    "summary": "",
+    "summary": "Java 7 환경에서 발생한 FCM 호출 실패 원인을 TLS 프로토콜 호환성 문제로 진단하고, TLS 버전 상향 및 인코딩 처리로 해결한 사례",
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2023-11-28"
@@ -57,7 +57,7 @@
     "id": "2af7af6d-bf98-80a2-9e38-cf66e74bd8cf",
     "title": "XA Transaction 중, UPDATE 쿼리만 실패하는 현상",
     "url": "https://www.notion.so/XA-Transaction-UPDATE-2af7af6dbf9880a29e38cf66e74bd8cf",
-    "summary": "XA Connection이 정상적으로 맺어져 서비스 수행되고 있으나 UPDATE 쿼리에서만 간헐적으로 실패하고 있음.",
+    "summary": "이기종 DBMS 연동 중 MSSQL에서만 발생한 UPDATE 실패 현상을 분석하여, 비활성화된 XA 트랜잭션 설정을 적용해 정합성 이슈를 해결한 사례",
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2023-06-05"
@@ -66,7 +66,7 @@
     "id": "2af7af6d-bf98-80ca-80fa-cdb071388a4e",
     "title": "로깅 과정에서 간헐적으로 IndexOutOfBoundsException 발생",
     "url": "https://www.notion.so/IndexOutOfBoundsException-2af7af6dbf9880ca80facdb071388a4e",
-    "summary": "로깅시 간헐적으로 오류 발생하고 있으며 특히 대용량 데이터를 처리할 때에 자주 발생함.",
+    "summary": "\n대용량 데이터 조회 시 발생한 오류 현상의 원인을 로깅 스레드와 객체 초기화 간의 경합으로 진단하고, 처리 순서를 보장하여 해결한 사례\n\n",
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2023-08-02"
@@ -102,7 +102,7 @@
     "id": "2b07af6d-bf98-8041-a5bf-fa0f0d6eb869",
     "title": "컨테이너 삼중화 구성시 HTTP 처리 지연 발생하는 현상",
     "url": "https://www.notion.so/HTTP-2b07af6dbf988041a5bffa0f0d6eb869",
-    "summary": "",
+    "summary": "HTTP 지연 현상의 원인을 TCP Dump 분석을 통해 서버 측 Handshake(SYN-ACK) 응답 지연으로 규명하고, 리소스 풀 튜닝을 권고한 사례",
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2024-03-19"
@@ -120,7 +120,7 @@
     "id": "2b07af6d-bf98-809b-a6bf-ee059e6e8ef2",
     "title": "랜섬웨어 감염으로 인하여 시스템 마비된 현상",
     "url": "https://www.notion.so/2b07af6dbf98809ba6bfee059e6e8ef2",
-    "summary": "",
+    "summary": "랜섬웨어 감염으로 인한 시스템 전면 장애 상황에서, DB BLOB 백업 데이터를 활용한 리소스 복원 및 인프라 재구축으로 해결한 사례",
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2024-03-07"
@@ -138,7 +138,7 @@
     "id": "2b07af6d-bf98-80d5-9387-d7c6a8cfc0d0",
     "title": "WebService 정상 호출되었으나 처리되지 않고 무한 대기하는 현상",
     "url": "https://www.notion.so/WebService-2b07af6dbf9880d59387d7c6a8cfc0d0",
-    "summary": "",
+    "summary": "무한 대기 및 세션 점유 원인을 리소스 소실로 진단하고, 재배포를 통해 정상화한 사례",
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2023-12-08"
@@ -147,7 +147,7 @@
     "id": "2b07af6d-bf98-80da-ba7f-e2d75c31c8d8",
     "title": "클라우드 이관 후 FTP 서비스 실패하는 현상",
     "url": "https://www.notion.so/FTP-2b07af6dbf9880daba7fe2d75c31c8d8",
-    "summary": "",
+    "summary": "클라우드 이관 후 발생한 FTP PUT 실패 원인을 디렉터리 권한 누락으로 진단하고, 권한 설정을 통해 해결한 사례",
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2024-03-06"
@@ -241,5 +241,14 @@
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2026-01-09"
+  },
+  {
+    "id": "2e77af6d-bf98-80ce-b591-e15a1aa8eb64",
+    "title": "",
+    "url": "https://www.notion.so/2e77af6dbf9880ceb591e15a1aa8eb64",
+    "summary": "",
+    "category": "Trouble Shooting",
+    "state": "해당없음",
+    "created_time": "2026-01-13T07:35:00.000Z"
   }
 ]
