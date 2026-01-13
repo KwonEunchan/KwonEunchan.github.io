@@ -1,7 +1,7 @@
 name: Update Notion Posts
 
 on:
-  # 30분마다 자동 실행 (GitHub 서버 사정에 따라 약간 지연될 수 있음)
+  # 30분마다 자동 실행
   schedule:
     - cron: '*/30 * * * *'
   
@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write  # git push를 위해 쓰기 권한 필수
+  contents: write
 
 jobs:
   update-data:
@@ -34,21 +34,15 @@ jobs:
 
       - name: Run Generator Script
         env:
-          # Settings > Secrets에 등록한 키값 불러오기
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
-        # 👇 여기가 수정된 경로입니다.
         run: node scripts/generate-posts.cjs
 
       - name: Commit and Push changes
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          
-          # 생성된 posts.json 파일 스테이징
           git add data/posts.json
-          
-          # 변경사항이 있을 때만 커밋하고 푸시 (에러 방지)
-          # [skip ci]는 이 커밋으로 인해 불필요한 배포 액션이 도는 것을 막아줍니다.
+
           git commit -m "Auto-update: Notion posts data [skip ci]" || echo "No changes to commit"
           git push
