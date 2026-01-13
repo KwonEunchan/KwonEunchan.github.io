@@ -1,0 +1,254 @@
+[
+  {
+    "id": "2a47af6d-bf98-8004-bd1c-c35d4ad69ef2",
+    "title": "로깅 구조 설계 미흡으로 발생한 메시지 전문 불일치 사례",
+    "url": "https://www.notion.so/2a47af6dbf988004bd1cc35d4ad69ef2",
+    "summary": "Published",
+    "category": "Insight",
+    "state": "해당없음",
+    "created_time": "2025-11-05"
+  },
+  {
+    "id": "2a47af6d-bf98-801c-9ed0-c010b0010390",
+    "title": "특정 시점 이후 모니터링 로그가 일체 조회되지 않는 현상",
+    "url": "https://www.notion.so/2a47af6dbf98801c9ed0c010b0010390",
+    "summary": "서비스 자체는 정상적으로 수행되고 있으나, 특정 시점 이후에 관리자 화면에서 트랜잭션 수행 로그가 일체 조회되지 않음.",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2023-05-04"
+  },
+  {
+    "id": "2a47af6d-bf98-808b-b136-e0aa08b4c455",
+    "title": "스터디",
+    "url": "https://www.notion.so/2a47af6dbf98808bb136e0aa08b4c455",
+    "summary": "",
+    "category": "",
+    "state": "해당없음",
+    "created_time": "2025-11-07T12:38:00.000Z"
+  },
+  {
+    "id": "2a47af6d-bf98-80b7-92ce-dd5fcb187e6d",
+    "title": "대용량 전문 수신시 컨테이너 재기동되는 현상",
+    "url": "https://www.notion.so/2a47af6dbf9880b792cedd5fcb187e6d",
+    "summary": "30MB 이상의 전문을 수신하면 간헐적으로 컨테이너가 재기동되는 현상이 지속적으로 발생하고 있음",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2023-01-17"
+  },
+  {
+    "id": "2a47af6d-bf98-80ff-9882-cd250a27fe93",
+    "title": "대형 F&B 기업 차세대 간편결제 플랫폼 구축",
+    "url": "https://www.notion.so/F-B-2a47af6dbf9880ff9882cd250a27fe93",
+    "summary": "",
+    "category": "Project",
+    "state": "해당없음",
+    "created_time": "2023-01-19"
+  },
+  {
+    "id": "2af7af6d-bf98-804b-b584-fbcdec7cec85",
+    "title": "FCM 호출시 지속적으로 요청 실패하는 현상",
+    "url": "https://www.notion.so/FCM-2af7af6dbf98804bb584fbcdec7cec85",
+    "summary": "",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2023-11-28"
+  },
+  {
+    "id": "2af7af6d-bf98-80a2-9e38-cf66e74bd8cf",
+    "title": "XA Transaction 중, UPDATE 쿼리만 실패하는 현상",
+    "url": "https://www.notion.so/XA-Transaction-UPDATE-2af7af6dbf9880a29e38cf66e74bd8cf",
+    "summary": "XA Connection이 정상적으로 맺어져 서비스 수행되고 있으나 UPDATE 쿼리에서만 간헐적으로 실패하고 있음.",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2023-06-05"
+  },
+  {
+    "id": "2af7af6d-bf98-80ca-80fa-cdb071388a4e",
+    "title": "로깅 과정에서 간헐적으로 IndexOutOfBoundsException 발생",
+    "url": "https://www.notion.so/IndexOutOfBoundsException-2af7af6dbf9880ca80facdb071388a4e",
+    "summary": "로깅시 간헐적으로 오류 발생하고 있으며 특히 대용량 데이터를 처리할 때에 자주 발생함.",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2023-08-02"
+  },
+  {
+    "id": "2b07af6d-bf98-800e-9572-fcc7e8a8eaa4",
+    "title": "SOAP 대용량 파일 송신 시 Marshalling Error 발생하는 현상",
+    "url": "https://www.notion.so/SOAP-Marshalling-Error-2b07af6dbf98800e9572fcc7e8a8eaa4",
+    "summary": "",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2024-12-12"
+  },
+  {
+    "id": "2b07af6d-bf98-801c-bc38-c0c3f98d4c48",
+    "title": "별도 인증이 없는 HTTPS 통신임에도 SSL Handshake 실패하는 현상",
+    "url": "https://www.notion.so/HTTPS-SSL-Handshake-2b07af6dbf98801cbc38c0c3f98d4c48",
+    "summary": "",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2024-06-13"
+  },
+  {
+    "id": "2b07af6d-bf98-8028-be42-d86966cdc7a0",
+    "title": "JAVA6에서 TLSv1.2 통신 실패하는 현상",
+    "url": "https://www.notion.so/JAVA6-TLSv1-2-2b07af6dbf988028be42d86966cdc7a0",
+    "summary": "",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2024-06-04"
+  },
+  {
+    "id": "2b07af6d-bf98-8041-a5bf-fa0f0d6eb869",
+    "title": "컨테이너 삼중화 구성시 HTTP 처리 지연 발생하는 현상",
+    "url": "https://www.notion.so/HTTP-2b07af6dbf988041a5bffa0f0d6eb869",
+    "summary": "",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2024-03-19"
+  },
+  {
+    "id": "2b07af6d-bf98-8051-948f-ed50b0f5c8f9",
+    "title": "AWS 환경으로 이관한 이후 SFTP 연결 실패하는 현상",
+    "url": "https://www.notion.so/AWS-SFTP-2b07af6dbf988051948fed50b0f5c8f9",
+    "summary": "SFTP 연결 실패 현상에 대한 원인 분석의 건",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2025-06-13"
+  },
+  {
+    "id": "2b07af6d-bf98-809b-a6bf-ee059e6e8ef2",
+    "title": "랜섬웨어 감염으로 인하여 시스템 마비된 현상",
+    "url": "https://www.notion.so/2b07af6dbf98809ba6bfee059e6e8ef2",
+    "summary": "",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2024-03-07"
+  },
+  {
+    "id": "2b07af6d-bf98-80c2-86fe-d2f2519ae23a",
+    "title": "HTTP 통신 간헐적으로 실패하는 현상",
+    "url": "https://www.notion.so/HTTP-2b07af6dbf9880c286fed2f2519ae23a",
+    "summary": "",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2024-06-25"
+  },
+  {
+    "id": "2b07af6d-bf98-80d5-9387-d7c6a8cfc0d0",
+    "title": "WebService 정상 호출되었으나 처리되지 않고 무한 대기하는 현상",
+    "url": "https://www.notion.so/WebService-2b07af6dbf9880d59387d7c6a8cfc0d0",
+    "summary": "",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2023-12-08"
+  },
+  {
+    "id": "2b07af6d-bf98-80da-ba7f-e2d75c31c8d8",
+    "title": "클라우드 이관 후 FTP 서비스 실패하는 현상",
+    "url": "https://www.notion.so/FTP-2b07af6dbf9880daba7fe2d75c31c8d8",
+    "summary": "",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2024-03-06"
+  },
+  {
+    "id": "2b57af6d-bf98-8003-9f87-d594d7d63dcc",
+    "title": "TCP 통신에서 실제 데이터 전문 크기와 다른 크기의 데이터를 수신하는 현상",
+    "url": "https://www.notion.so/TCP-2b57af6dbf9880039f87d594d7d63dcc",
+    "summary": "엔디안 방식이 전문 길이 인식에 미치는 영향 분석의 건",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2025-11-25"
+  },
+  {
+    "id": "2be7af6d-bf98-8016-9473-e45a2b95d5cd",
+    "title": "리소스 배포 후 Out Of Memory가 급격히 발생하는 현상 (Direct Buffer Memory)",
+    "url": "https://www.notion.so/Out-Of-Memory-Direct-Buffer-Memory-2be7af6dbf9880169473e45a2b95d5cd",
+    "summary": "패치 이후 Direct Buffer Memory 영역이 급격히 점유되며 OOM까지 발생하던 건",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2025-11-30"
+  },
+  {
+    "id": "2d27af6d-bf98-8057-a085-d6cd392e3ac8",
+    "title": "JAVA 애플리케이션은 항상 OS에 독립적인가",
+    "url": "https://www.notion.so/JAVA-OS-2d27af6dbf988057a085d6cd392e3ac8",
+    "summary": "Published",
+    "category": "Insight",
+    "state": "해당없음",
+    "created_time": "2025-12-12"
+  },
+  {
+    "id": "2d57af6d-bf98-8033-9cd3-c0b88c1ea771",
+    "title": "VAN / 카드사 연동 시스템 구축",
+    "url": "https://www.notion.so/VAN-2d57af6dbf9880339cd3c0b88c1ea771",
+    "summary": "",
+    "category": "Project",
+    "state": "해당없음",
+    "created_time": "2023-06-19"
+  },
+  {
+    "id": "2e07af6d-bf98-8084-adc9-cec88cf7c78c",
+    "title": "배치 작업 시 공용 자원의 부하를 고려하는 아키텍처 고민",
+    "url": "https://www.notion.so/2e07af6dbf988084adc9cec88cf7c78c",
+    "summary": "Published",
+    "category": "Insight",
+    "state": "해당없음",
+    "created_time": "2026-01-06"
+  },
+  {
+    "id": "2e27af6d-bf98-8014-b9e8-c357be43373b",
+    "title": "건설사 ERP 회계 인터페이스 구축",
+    "url": "https://www.notion.so/ERP-2e27af6dbf988014b9e8c357be43373b",
+    "summary": "",
+    "category": "Project",
+    "state": "해당없음",
+    "created_time": "2024-12-02"
+  },
+  {
+    "id": "2e27af6d-bf98-801d-991e-f074610f95f2",
+    "title": "저축은행 모바일 뱅킹 고도화",
+    "url": "https://www.notion.so/2e27af6dbf98801d991ef074610f95f2",
+    "summary": "",
+    "category": "Project",
+    "state": "해당없음",
+    "created_time": "2025-09-24"
+  },
+  {
+    "id": "2e27af6d-bf98-801e-b829-dccf25701f48",
+    "title": "보험료 자동이체 시스템 구축",
+    "url": "https://www.notion.so/2e27af6dbf98801eb829dccf25701f48",
+    "summary": "",
+    "category": "Project",
+    "state": "해당없음",
+    "created_time": "2025-10-21"
+  },
+  {
+    "id": "2e27af6d-bf98-806b-92d5-e337b7f30c85",
+    "title": "제약회사 MES 시스템 인터페이스 구축",
+    "url": "https://www.notion.so/MES-2e27af6dbf98806b92d5e337b7f30c85",
+    "summary": "",
+    "category": "Project",
+    "state": "해당없음",
+    "created_time": "2023-10-16"
+  },
+  {
+    "id": "2e37af6d-bf98-804e-ae50-e71d5a52245d",
+    "title": "특정 시간 대에 유입된 전문에 대한 지연 처리가 발생하는 현상",
+    "url": "https://www.notion.so/2e37af6dbf98804eae50e71d5a52245d",
+    "summary": "TCP DUMP와 GC LOG를 이용한 지연 현상에 대한 원인 분석의 건",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2026-01-09"
+  },
+  {
+    "id": "2e37af6d-bf98-8058-bcad-f83370996172",
+    "title": "",
+    "url": "https://www.notion.so/2e37af6dbf988058bcadf83370996172",
+    "summary": "",
+    "category": "Trouble Shooting",
+    "state": "해당없음",
+    "created_time": "2026-01-09T03:55:00.000Z"
+  }
+]
