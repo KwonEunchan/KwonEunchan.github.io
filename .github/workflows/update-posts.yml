@@ -27,7 +27,7 @@ jobs:
         run: |
           # package-lock.json이 있으면 ci, 없으면 install
           if [ -e package-lock.json ]; then
-            npm ci
+            npm install
           else
             npm install
           fi
