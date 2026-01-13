@@ -75,7 +75,7 @@
     "id": "2b07af6d-bf98-800e-9572-fcc7e8a8eaa4",
     "title": "SOAP 대용량 파일 송신 시 Marshalling Error 발생하는 현상",
     "url": "https://www.notion.so/SOAP-Marshalling-Error-2b07af6dbf98800e9572fcc7e8a8eaa4",
-    "summary": "",
+    "summary": "SOAP 대용량 전문 전송 시 발생하는 Marshalling Error를 CXF Chunking 비활성화로 해결하여 데이터 전송 안정성을 확보한 사례",
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2024-12-12"
@@ -84,7 +84,7 @@
     "id": "2b07af6d-bf98-801c-bc38-c0c3f98d4c48",
     "title": "별도 인증이 없는 HTTPS 통신임에도 SSL Handshake 실패하는 현상",
     "url": "https://www.notion.so/HTTPS-SSL-Handshake-2b07af6dbf98801cbc38c0c3f98d4c48",
-    "summary": "",
+    "summary": "\nHTTPS 통신 실패 현상의 원인을 서버 인증서 호스트명 불일치로 진단하고, 클라이언트의 호스트명 검증 비활성화하여 해결한 사례\n\n",
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2024-06-13"
@@ -93,7 +93,7 @@
     "id": "2b07af6d-bf98-8028-be42-d86966cdc7a0",
     "title": "JAVA6에서 TLSv1.2 통신 실패하는 현상",
     "url": "https://www.notion.so/JAVA6-TLSv1-2-2b07af6dbf988028be42d86966cdc7a0",
-    "summary": "",
+    "summary": "Java 6 환경의 TLSv1.2 미지원으로 인한 HTTPS 통신 실패 원인을 규명하고, Bouncy Castle을 통한 우회 방안을 제안한 사례",
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2024-06-04"
@@ -102,7 +102,7 @@
     "id": "2b07af6d-bf98-8041-a5bf-fa0f0d6eb869",
     "title": "컨테이너 삼중화 구성시 HTTP 처리 지연 발생하는 현상",
     "url": "https://www.notion.so/HTTP-2b07af6dbf988041a5bffa0f0d6eb869",
-    "summary": "HTTP 지연 현상의 원인을 TCP Dump 분석을 통해 서버 측 Handshake(SYN-ACK) 응답 지연으로 규명하고, 리소스 풀 튜닝을 권고한 사례",
+    "summary": "HTTP 지연 현상의 원인을 TCP Dump 분석을 통해 서버 측 응답 지연으로 규명하고, 리소스 풀 튜닝을 권고한 사례",
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2024-03-19"
@@ -111,7 +111,7 @@
     "id": "2b07af6d-bf98-8051-948f-ed50b0f5c8f9",
     "title": "AWS 환경으로 이관한 이후 SFTP 연결 실패하는 현상",
     "url": "https://www.notion.so/AWS-SFTP-2b07af6dbf988051948fed50b0f5c8f9",
-    "summary": "SFTP 연결 실패 현상에 대한 원인 분석의 건",
+    "summary": "AWS 이관 후 OpenSSL 버전 차이로 인한 SFTP 알고리즘 협상 실패를 진단하고, MAC 설정을 추가하여 호환성 문제를 해결한 사례",
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2025-06-13"
@@ -127,9 +127,9 @@
   },
   {
     "id": "2b07af6d-bf98-80c2-86fe-d2f2519ae23a",
-    "title": "HTTP 통신 간헐적으로 실패하는 현상",
-    "url": "https://www.notion.so/HTTP-2b07af6dbf9880c286fed2f2519ae23a",
-    "summary": "",
+    "title": "간헐적으로 HTTP Connection Reset 발생하는 현상",
+    "url": "https://www.notion.so/HTTP-Connection-Reset-2b07af6dbf9880c286fed2f2519ae23a",
+    "summary": "TCP Dump 분석으로 세션 만료 불일치에 의한 통신 오류를 진단하고, HTTP Keep-Alive 헤더 최적화를 통해 서비스 안정성을 확보한 사례",
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2024-06-25"
@@ -156,7 +156,7 @@
     "id": "2b57af6d-bf98-8003-9f87-d594d7d63dcc",
     "title": "TCP 통신에서 실제 데이터 전문 크기와 다른 크기의 데이터를 수신하는 현상",
     "url": "https://www.notion.so/TCP-2b57af6dbf9880039f87d594d7d63dcc",
-    "summary": "엔디안 방식이 전문 길이 인식에 미치는 영향 분석의 건",
+    "summary": "클라이언트 서버 이관 후 발생한 전문 길이 해석 오류를 OS 간 Endian 차이로 진단하고, 바이트 정렬 방식을 교정하여 통신 호환성을 확보한 사례",
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2025-11-25"
@@ -165,7 +165,7 @@
     "id": "2be7af6d-bf98-8016-9473-e45a2b95d5cd",
     "title": "리소스 배포 후 Out Of Memory가 급격히 발생하는 현상 (Direct Buffer Memory)",
     "url": "https://www.notion.so/Out-Of-Memory-Direct-Buffer-Memory-2be7af6dbf9880169473e45a2b95d5cd",
-    "summary": "패치 이후 Direct Buffer Memory 영역이 급격히 점유되며 OOM까지 발생하던 건",
+    "summary": "리소스 배포 후 발생한 OOM 원인을 진단하고, JVM 옵션 튜닝으로 메모리 안정성을 확보한 사례",
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2025-11-30"
@@ -237,7 +237,7 @@
     "id": "2e37af6d-bf98-804e-ae50-e71d5a52245d",
     "title": "특정 시간 대에 유입된 전문에 대한 지연 처리가 발생하는 현상",
     "url": "https://www.notion.so/2e37af6dbf98804eae50e71d5a52245d",
-    "summary": "TCP DUMP와 GC LOG를 이용한 지연 현상에 대한 원인 분석의 건",
+    "summary": "TCP Dump와 GC 로그를 교차 분석하여 네트워크 응답과 앱 처리 시점의 불일치 원인을 Stop-The-World로 규명하고, 튜닝으로 지연을 해결한 사례",
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2026-01-09"
