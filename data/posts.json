@@ -3,7 +3,7 @@
     "id": "2a47af6d-bf98-8004-bd1c-c35d4ad69ef2",
     "title": "로깅 구조 설계 미흡으로 발생한 메시지 전문 불일치 사례",
     "url": "https://www.notion.so/2a47af6dbf988004bd1cc35d4ad69ef2",
-    "summary": "Published",
+    "summary": "",
     "category": "Insight",
     "state": "해당없음",
     "created_time": "2025-11-05"
@@ -174,7 +174,7 @@
     "id": "2d27af6d-bf98-8057-a085-d6cd392e3ac8",
     "title": "JAVA 애플리케이션은 항상 OS에 독립적인가",
     "url": "https://www.notion.so/JAVA-OS-2d27af6dbf988057a085d6cd392e3ac8",
-    "summary": "Published",
+    "summary": "",
     "category": "Insight",
     "state": "해당없음",
     "created_time": "2025-12-12"
@@ -192,7 +192,7 @@
     "id": "2e07af6d-bf98-8084-adc9-cec88cf7c78c",
     "title": "배치 작업 시 공용 자원의 부하를 고려하는 아키텍처 고민",
     "url": "https://www.notion.so/2e07af6dbf988084adc9cec88cf7c78c",
-    "summary": "Published",
+    "summary": "",
     "category": "Insight",
     "state": "해당없음",
     "created_time": "2026-01-06"
@@ -241,14 +241,5 @@
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2026-01-09"
-  },
-  {
-    "id": "2e77af6d-bf98-808d-b6d7-e69de37188fa",
-    "title": "특정 시간 대에 유입된 전문에 대한 지연 처리가 발생하는 현상 (1)",
-    "url": "https://www.notion.so/1-2e77af6dbf98808db6d7e69de37188fa",
-    "summary": "TCP Dump와 GC 로그를 교차 분석하여 네트워크 응답과 앱 처리 시점의 불일치 원인을 Stop-The-World로 규명하고, 튜닝으로 지연을 해결한 사례",
-    "category": "Trouble Shooting",
-    "state": "완료",
-    "created_time": "2026-01-13"
   }
 ]
