@@ -30,7 +30,7 @@
     "id": "2a47af6d-bf98-80b7-92ce-dd5fcb187e6d",
     "title": "대용량 전문 수신시 컨테이너 재기동되는 현상",
     "url": "https://www.notion.so/2a47af6dbf9880b792cedd5fcb187e6d",
-    "summary": "30MB 이상의 전문을 수신하면 간헐적으로 컨테이너가 재기동되는 현상이 지속적으로 발생하고 있음",
+    "summary": "30MB 이상의 전문을 수신하면 간헐적으로 컨테이너가 재기동되는 현상이 지속적으로 발생하던 문제를 해결한 경험",
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2023-01-17"
@@ -241,14 +241,5 @@
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2026-01-09"
-  },
-  {
-    "id": "2e37af6d-bf98-8058-bcad-f83370996172",
-    "title": "",
-    "url": "https://www.notion.so/2e37af6dbf988058bcadf83370996172",
-    "summary": "",
-    "category": "Trouble Shooting",
-    "state": "해당없음",
-    "created_time": "2026-01-09T03:55:00.000Z"
   }
 ]
