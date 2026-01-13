@@ -243,12 +243,12 @@
     "created_time": "2026-01-09"
   },
   {
-    "id": "2e77af6d-bf98-80ce-b591-e15a1aa8eb64",
-    "title": "",
-    "url": "https://www.notion.so/2e77af6dbf9880ceb591e15a1aa8eb64",
-    "summary": "",
+    "id": "2e77af6d-bf98-808d-b6d7-e69de37188fa",
+    "title": "특정 시간 대에 유입된 전문에 대한 지연 처리가 발생하는 현상 (1)",
+    "url": "https://www.notion.so/1-2e77af6dbf98808db6d7e69de37188fa",
+    "summary": "TCP Dump와 GC 로그를 교차 분석하여 네트워크 응답과 앱 처리 시점의 불일치 원인을 Stop-The-World로 규명하고, 튜닝으로 지연을 해결한 사례",
     "category": "Trouble Shooting",
-    "state": "해당없음",
-    "created_time": "2026-01-13T07:35:00.000Z"
+    "state": "완료",
+    "created_time": "2026-01-13"
   }
 ]
