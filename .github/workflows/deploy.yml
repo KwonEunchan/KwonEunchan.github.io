@@ -1,11 +1,10 @@
 name: Build and Deploy
 
-workflow_dispatch:
-
 on:
   push:
     branches:
       - main
+  workflow_dispatch: # 여기에 위치해야 수동 실행 버튼이 활성화됩니다.
 
 permissions:
   contents: write
