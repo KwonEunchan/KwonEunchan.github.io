@@ -39,7 +39,7 @@
     "id": "2a47af6d-bf98-80ff-9882-cd250a27fe93",
     "title": "대형 F&B 기업 차세대 간편결제 플랫폼 구축",
     "url": "https://www.notion.so/F-B-2a47af6dbf9880ff9882cd250a27fe93",
-    "summary": "",
+    "summary": "존 멤버십 시스템을 선불 충전 및 온-오프라인 통합 결제가 가능한 핀테크 플랫폼으로 고도화",
     "category": "Project",
     "state": "해당없음",
     "created_time": "2023-01-19"
@@ -183,7 +183,7 @@
     "id": "2d57af6d-bf98-8033-9cd3-c0b88c1ea771",
     "title": "VAN / 카드사 연동 시스템 구축",
     "url": "https://www.notion.so/VAN-2d57af6dbf9880339cd3c0b88c1ea771",
-    "summary": "",
+    "summary": "주요 VAN사 및 카드사와의 대외 인터페이스 구축을 통한 결제 승인/취소 트랜잭션 처리망 확보",
     "category": "Project",
     "state": "해당없음",
     "created_time": "2023-06-19"
@@ -201,7 +201,7 @@
     "id": "2e27af6d-bf98-8014-b9e8-c357be43373b",
     "title": "건설사 ERP 회계 인터페이스 구축",
     "url": "https://www.notion.so/ERP-2e27af6dbf988014b9e8c357be43373b",
-    "summary": "",
+    "summary": "법인카드 사용 내역 및 전자세금계산서 데이터를 SAP ERP로 자동 연동하여 회계 마감 업무 효율화",
     "category": "Project",
     "state": "해당없음",
     "created_time": "2024-12-02"
@@ -210,7 +210,7 @@
     "id": "2e27af6d-bf98-801d-991e-f074610f95f2",
     "title": "저축은행 모바일 뱅킹 고도화",
     "url": "https://www.notion.so/2e27af6dbf98801d991ef074610f95f2",
-    "summary": "",
+    "summary": "모바일 뱅킹 서비스 개편에 따른 대외 채널과 내부 계정계 시스템 간 인터페이스 고도화",
     "category": "Project",
     "state": "해당없음",
     "created_time": "2025-09-24"
@@ -219,7 +219,7 @@
     "id": "2e27af6d-bf98-801e-b829-dccf25701f48",
     "title": "보험료 자동이체 시스템 구축",
     "url": "https://www.notion.so/2e27af6dbf98801eb829dccf25701f48",
-    "summary": "",
+    "summary": "보험료 자동이체(CMS) 데이터의 대량 처리 안정성 확보를 위한 대외 연계 방식 개편",
     "category": "Project",
     "state": "해당없음",
     "created_time": "2025-10-21"
@@ -228,7 +228,7 @@
     "id": "2e27af6d-bf98-806b-92d5-e337b7f30c85",
     "title": "제약회사 MES 시스템 인터페이스 구축",
     "url": "https://www.notion.so/MES-2e27af6dbf98806b92d5e337b7f30c85",
-    "summary": "",
+    "summary": "제약 생산 공정의 효율화를 위한 MES  구축 및 기존 ERP와의 데이터 정합성 확보",
     "category": "Project",
     "state": "해당없음",
     "created_time": "2023-10-16"
@@ -241,5 +241,14 @@
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2026-01-09"
+  },
+  {
+    "id": "2e87af6d-bf98-804f-9ff8-cbf3cae17f5c",
+    "title": "HTTP 요청시 간헐적으로 통신 실패하는 현상",
+    "url": "https://www.notion.so/HTTP-2e87af6dbf98804f9ff8cbf3cae17f5c",
+    "summary": "시스템 로그를 정밀 분석하여 원인 규명한 사례",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2026-01-13"
   }
 ]
