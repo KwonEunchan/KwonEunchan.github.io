@@ -249,7 +249,7 @@
     "summary": "",
     "category": "Insight",
     "state": "해당없음",
-    "created_time": "2026-01-14"
+    "created_time": "2026-01-15"
   },
   {
     "id": "2e87af6d-bf98-804f-9ff8-cbf3cae17f5c",
@@ -259,5 +259,14 @@
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2026-01-13"
+  },
+  {
+    "id": "2e97af6d-bf98-8060-81f5-c62e85c413e6",
+    "title": "Gitlab과 Github의 차이점",
+    "url": "https://www.notion.so/Gitlab-Github-2e97af6dbf98806081f5c62e85c413e6",
+    "summary": "",
+    "category": "Insight",
+    "state": "해당없음",
+    "created_time": "2026-01-15T07:49:00.000Z"
   }
 ]
