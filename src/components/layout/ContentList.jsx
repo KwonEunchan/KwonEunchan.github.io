@@ -6,7 +6,8 @@ export default function ContentList({ selectedCategory, keyword }) {
   const categoryMap = {
     "문제해결": "Trouble Shooting",
     "인사이트": "Insight",
-    "프로젝트": "Project"
+    "프로젝트": "Project",
+    "기술스택": "Tech Stack"
   };
 
   const filtered = posts
@@ -65,3 +66,4 @@ export default function ContentList({ selectedCategory, keyword }) {
     </section>
   );
 }
+
