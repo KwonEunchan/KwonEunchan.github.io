@@ -5,7 +5,6 @@ export default function CategoryPanel({ onSelect, onSearch }) {
   const categories = [
     { id: "문제해결", label: "문제해결" },
     { id: "인사이트", label: "인사이트" },
-    { id: "프로젝트", label: "프로젝트" },
     { id: "기술스택", label: "기술스택" }
   ];
 
@@ -92,5 +91,6 @@ export default function CategoryPanel({ onSelect, onSearch }) {
     </section>
   );
 }
+
 
 
