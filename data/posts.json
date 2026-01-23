@@ -261,12 +261,21 @@
     "created_time": "2026-01-13"
   },
   {
-    "id": "2e97af6d-bf98-8060-81f5-c62e85c413e6",
-    "title": "Gitlab과 Github의 차이점",
-    "url": "https://www.notion.so/Gitlab-Github-2e97af6dbf98806081f5c62e85c413e6",
+    "id": "2f17af6d-bf98-8025-bd77-e5aa877bf23f",
+    "title": "DMZ 아키텍처에서 L4와 Proxy가 공존해야 하는 이유",
+    "url": "https://www.notion.so/DMZ-L4-Proxy-2f17af6dbf988025bd77e5aa877bf23f",
     "summary": "",
     "category": "Insight",
     "state": "해당없음",
-    "created_time": "2026-01-15T07:49:00.000Z"
+    "created_time": "2026-01-15"
+  },
+  {
+    "id": "2f17af6d-bf98-809b-be61-fc9857abe0d9",
+    "title": "보안 아키텍쳐 도입 이후 대외계 통신 장애 발생하는 현상",
+    "url": "https://www.notion.so/2f17af6dbf98809bbe61fc9857abe0d9",
+    "summary": "유관 부서와의 협의를 통해 시스템 환경을 개선한 사례",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2026-01-22"
   }
 ]
