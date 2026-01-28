@@ -277,5 +277,14 @@
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2026-01-22"
+  },
+  {
+    "id": "2f67af6d-bf98-80cc-b23b-ceebb4cab7c3",
+    "title": "보안 아키텍쳐 도입 이후 대외계 통신 장애 발생하는 현상 (1)",
+    "url": "https://www.notion.so/1-2f67af6dbf9880ccb23bceebb4cab7c3",
+    "summary": "유관 부서와의 협의를 통해 시스템 환경을 개선한 사례",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2026-01-22"
   }
 ]
