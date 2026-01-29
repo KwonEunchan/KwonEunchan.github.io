@@ -286,5 +286,14 @@
     "category": "Trouble Shooting",
     "state": "완료",
     "created_time": "2026-01-27"
+  },
+  {
+    "id": "2f77af6d-bf98-8072-8f67-eb96cca546b1",
+    "title": "컨테이너 재기동 시 BindException 발생하며 포트 충돌하던 현상 ",
+    "url": "https://www.notion.so/BindException-2f77af6dbf9880728f67eb96cca546b1",
+    "summary": "아키텍처 구조를 분석하여 간헐적 포트 충돌의 원인을 규명하고, OS 커널 정책 적용을 통해 근본적인 재발 방지 체계를 구축한 사례\n\n",
+    "category": "Trouble Shooting",
+    "state": "완료",
+    "created_time": "2026-01-28"
   }
 ]
