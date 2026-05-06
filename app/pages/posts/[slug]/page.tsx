@@ -1,6 +1,7 @@
 import { getPostData, getSortedPostsData } from '@/lib/posts';
 import PostNavigation from '@/app/components/post/PostNavigation/PostNavigation';
 import PostActions from './PostActions';
+import styles from './PostDetail.module.scss';
 
 export const dynamicParams = false;
 
@@ -34,7 +35,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
   if (!postData) {
     return (
-      <div style={{ padding: '32px', textAlign: 'center' }}>
+      <div className={styles.notFound}>
         <PostNavigation />
         <p>게시글을 찾을 수 없거나 아직 작성된 글이 없습니다.</p>
       </div>
@@ -42,21 +43,23 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   }
 
   return (
-    <article style={{ padding: '32px 16px', maxWidth: '1600px', margin: '0 auto' }}>
+    <article className={styles.container}>
       <PostNavigation />
       
-      <PostActions slug={decodedSlug} title={postData.title} />
+      <div className={styles.actionsContainer}>
+        <PostActions slug={decodedSlug} title={postData.title} />
+      </div>
 
-      <h1 style={{ fontFamily: "'Noto Sans KR', sans-serif", color: '#24292f', marginBottom: '8px' }}>
-        {postData.title}
-      </h1>
-
-      <p style={{ color: '#57606a', borderBottom: '1px solid #d0d7de', paddingBottom: '16px', fontSize: '14px', marginBottom: '32px' }}>
-        작성일: {postData.date}
-      </p>
+      <header className={styles.header}>
+        <h1 className={styles.title}>{postData.title}</h1>
+        <div className={styles.meta}>
+          <span>작성일: {postData.date}</span>
+        </div>
+        <hr className={styles.divider} />
+      </header>
 
       <div 
-        className="markdown-body" 
+        className={styles.editorContent} 
         dangerouslySetInnerHTML={{ __html: postData.contentHtml }} 
       />
     </article>
