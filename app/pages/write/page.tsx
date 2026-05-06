@@ -22,6 +22,7 @@ function WriteForm() {
   const [isTroubleshooting, setIsTroubleshooting] = useState(false);
   const [originalSha, setOriginalSha] = useState('');
   const [isLoadingEdit, setIsLoadingEdit] = useState(!!editSlug);
+  const [originalDate, setOriginalDate] = useState('');
 
   const editorRef = useRef<any>(null);
 
@@ -50,6 +51,9 @@ function WriteForm() {
 
             const descMatch = frontmatter.match(/description:\s*"(.*?)"/);
             if (descMatch) setDescription(descMatch[1]);
+
+            const dateMatch = frontmatter.match(/date:\s*"(.*?)"/);
+            if (dateMatch) setOriginalDate(dateMatch[1]);
 
             if (frontmatter.includes('tags: ["트러블슈팅"]')) setIsTroubleshooting(true);
 
@@ -146,6 +150,8 @@ function WriteForm() {
         String(now.getMinutes()).padStart(2, '0') +
         String(now.getSeconds()).padStart(2, '0');
 
+      const slug = editSlug ? editSlug : fixedId;
+
       const blobRegex = /!\[.*?\]\((blob:.*?)\)/g;
       const matches = Array.from(markdown.matchAll(blobRegex)) as RegExpMatchArray[];
       
@@ -153,7 +159,7 @@ function WriteForm() {
         let i = 0;
         for (const match of matches) {
           const blobUrl = match[1];
-          const uploadedPath = await uploadImageToGithub(blobUrl, fixedId, i);
+          const uploadedPath = await uploadImageToGithub(blobUrl, slug, i);
           markdown = markdown.split(blobUrl).join(uploadedPath);
           i++;
         }
@@ -161,9 +167,11 @@ function WriteForm() {
 
       const owner = 'KwonEunchan';
       const repo = 'KwonEunchan.github.io';
-      const formattedDate = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+      
+      const formattedDate = editSlug && originalDate 
+        ? originalDate 
+        : `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
 
-      const slug = editSlug ? editSlug : fixedId;
       const fileName = `${slug}.md`;
       const path = `contents/posts/${fileName}`;
       const tags = isTroubleshooting ? '\ntags: ["트러블슈팅"]' : '';
@@ -172,7 +180,7 @@ function WriteForm() {
       const thumbnail = firstImageMatch ? firstImageMatch[1] : '';
       const thumbField = thumbnail ? `\nthumbnail: "${thumbnail}"` : '';
 
-      const frontmatter = `---\nid: ${fixedId}\ntitle: "${title}"\ndescription: "${description}"${thumbField}\ndate: "${formattedDate}"${tags}\n---\n\n`;
+      const frontmatter = `---\nid: ${slug}\ntitle: "${title}"\ndescription: "${description}"${thumbField}\ndate: "${formattedDate}"${tags}\n---\n\n`;
       const fullContent = frontmatter + markdown;
       const contentEncoded = btoa(unescape(encodeURIComponent(fullContent)));
 
@@ -234,7 +242,7 @@ function WriteForm() {
             </div>
             <button className={styles.cancelBtn} onClick={() => router.back()} disabled={isSubmitting}>나가기</button>
             <button className={styles.submitBtn} onClick={handleSubmit} disabled={isSubmitting || !title.trim() || !description.trim() || !githubToken.trim() || isLoadingEdit}>
-              {isSubmitting ? '이미지 업로드 중...' : (editSlug ? '수정 완료' : '업로드')}
+              {isSubmitting ? '처리 중...' : (editSlug ? '수정 완료' : '업로드')}
             </button>
           </div>
         </div>
