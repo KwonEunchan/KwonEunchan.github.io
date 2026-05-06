@@ -1,0 +1,138 @@
+.contactContainer {
+  width: 100%;
+  max-width: 1600px;
+  margin: 20px auto 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  background: #f8f9fa;
+  border: 1px solid #eaeaea;
+  border-radius: 16px;
+  padding: 32px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  box-sizing: border-box;
+}
+
+.textSide {
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+    margin: 0 0 8px 0;
+  }
+  p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+  }
+}
+
+.buttonSide {
+  display: flex;
+  gap: 12px;
+}
+
+.emailBtn, .kakaoBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.emailBtn {
+  background-color: #24292f;
+  color: #fff;
+  &:hover {
+    background-color: #000;
+    transform: translateY(-2px);
+  }
+}
+
+.kakaoBtn {
+  background-color: #fee500;
+  color: #181600;
+  &:hover {
+    background-color: #fada0a;
+    transform: translateY(-2px);
+  }
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.copyTooltip {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0969da;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 8px;
+    height: 8px;
+    background: #0969da;
+  }
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    top: -45px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .contactContainer {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 24px;
+  }
+  .buttonSide {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactContainer { margin-top: 32px; }
+  .textSide h2 { font-size: 18px; }
+  .textSide p { font-size: 13px; }
+  .buttonSide { flex-direction: column; }
+  .emailBtn, .kakaoBtn { justify-content: center; }
+}

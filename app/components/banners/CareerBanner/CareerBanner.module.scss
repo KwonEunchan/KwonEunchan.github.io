@@ -1,0 +1,98 @@
+.bannerWrapper {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  .bannerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 64px;
+    border: 1px solid #e0f2fe;
+    border-radius: 12px;
+    background-color: #f4faff;
+    padding: 16px 24px;
+    box-sizing: border-box;
+  }
+  
+  .messageSection {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .iconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #18A8F1;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .message {
+    font-size: 15px;
+    color: #333333;
+    letter-spacing: -0.3px;
+    font-weight: 600;
+  }
+  
+  .badgeSection {
+    display: flex;
+    align-items: center;
+  }
+  
+  .experienceBadge {
+    display: flex;
+    align-items: center;
+    background-color: rgba(24, 168, 241, 0.06);
+    border: 1px solid rgba(24, 168, 241, 0.2);
+    border-radius: 999px;
+    padding: 6px 14px;
+    gap: 8px;
+    transition: all 0.2s ease;
+  
+    &:hover {
+      background-color: rgba(24, 168, 241, 0.12);
+      border-color: rgba(24, 168, 241, 0.4);
+    }
+  }
+  
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #18A8F1;
+    box-shadow: 0 0 0 2px rgba(24, 168, 241, 0.2);
+  }
+  
+  .badgeLabel {
+    font-size: 13px;
+    color: #57606a;
+    font-weight: 500;
+  }
+  
+  .badgeValue {
+    font-size: 13px;
+    color: #18A8F1;
+    font-weight: 700;
+  }
+  
+  @media (max-width: 768px) {
+    .bannerContainer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px;
+    }
+  
+    .badgeSection {
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }

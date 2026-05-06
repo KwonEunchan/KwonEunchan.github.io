@@ -1,0 +1,83 @@
+.actionsContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  
+  .tokenWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #24292f;
+    padding: 0 14px;
+    border-radius: 8px;
+    height: 40px;
+    color: #ffffff;
+    transition: all 0.2s;
+    
+    &:focus-within {
+      background: #000000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  .tokenInput {
+    border: none;
+    outline: none;
+    font-size: 13px;
+    width: 160px;
+    height: 100%;
+    background: transparent;
+    color: #ffffff;
+    font-weight: 500;
+    
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  
+  .editBtn, .deleteBtn {
+    height: 40px;
+    padding: 0 18px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+    
+    &:disabled {
+      background: #adb5bd;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+  
+  .editBtn {
+    background: #0969da;
+    &:hover:not(:disabled) {
+      background: #0353a4;
+      transform: translateY(-1px);
+    }
+  }
+  
+  .deleteBtn {
+    background: #cf222e;
+    &:hover:not(:disabled) {
+      background: #a40e26;
+      transform: translateY(-1px);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .actionsContainer {
+      flex-wrap: wrap;
+    }
+    .tokenWrapper {
+      width: 100%;
+      order: -1;
+    }
+  }

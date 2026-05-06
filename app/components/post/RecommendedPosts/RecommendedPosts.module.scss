@@ -1,0 +1,175 @@
+.recContainer {
+  width: 100%;
+  max-width: 1600px;
+  margin: 32px auto 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.recHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.recTitleArea {
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    color: #222;
+  }
+}
+
+.recMoreLink {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: #57606a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  &:hover {
+    color: #0969da;
+  }
+}
+
+.recArrowIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.recGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.recCard {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.2s;
+  color: inherit;
+  box-sizing: border-box;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.recThumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.recImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recPlaceholder {
+  opacity: 0.3;
+}
+
+.recContent {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.recTitle {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+}
+
+.recSummary {
+  font-size: 13px;
+  color: #666;
+  margin: 0 0 20px 0;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recMeta {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #888;
+}
+
+.recAuthor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.recAvatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: url('/favicon.ico');
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #f0f0f2;
+}
+
+.recDate {
+  font-size: 12px;
+}
+
+@media (max-width: 1600px) {
+  .recContainer {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .recGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .recGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .recGrid {
+    grid-template-columns: 1fr;
+  }
+}
