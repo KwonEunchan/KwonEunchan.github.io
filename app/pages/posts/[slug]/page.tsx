@@ -13,7 +13,7 @@ export async function generateStaticParams() {
     }
 
     return posts.map((post) => ({
-      slug: post.slug,
+      slug: String(post.slug),
     }));
   } catch (error) {
     return [];

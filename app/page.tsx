@@ -9,7 +9,7 @@ export default function Home() {
       <CareerBanner />
       <ContactBanner />
       <RecommendedPosts 
-        postIds={['20260507014810402']} 
+        postIds={['20260507014810']} 
       />
     </main>
   );

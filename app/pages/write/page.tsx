@@ -144,8 +144,7 @@ function WriteForm() {
         String(now.getDate()).padStart(2, '0') +
         String(now.getHours()).padStart(2, '0') +
         String(now.getMinutes()).padStart(2, '0') +
-        String(now.getSeconds()).padStart(2, '0') +
-        String(now.getMilliseconds()).padStart(3, '0');
+        String(now.getSeconds()).padStart(2, '0');
 
       const blobRegex = /!\[.*?\]\((blob:.*?)\)/g;
       const matches = Array.from(markdown.matchAll(blobRegex)) as RegExpMatchArray[];
