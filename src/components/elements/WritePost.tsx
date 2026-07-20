@@ -399,7 +399,7 @@ ${content}
             <div className="sm:max-w-xs w-full">
               <input
                 type="password"
-                placeholder="토큰을 입력해주세요"
+                placeholder="토큰을 입력"
                 value={tokenInput}
                 onChange={(e) => handleTokenChange(e.target.value)}
                 className={`w-full h-9.5 px-3.5 border rounded-xl text-xs font-mono focus:outline-none transition-all duration-300 shadow-sm
