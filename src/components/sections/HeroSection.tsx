@@ -11,10 +11,8 @@ export default function HeroSection() {
     if (!canvasRef.current || !containerRef.current) return;
 
     const container = containerRef.current;
-
-    // 1. 씬 및 카메라 세팅 (정면 플랫 뷰)
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color("#050814"); // 베이스 딥 네이비
+    scene.background = new THREE.Color("#050814");
 
     const camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 0.1, 1000);
     camera.position.set(0, 0, 10);
@@ -27,11 +25,9 @@ export default function HeroSection() {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(container.clientWidth, container.clientHeight);
 
-    // 2. 조명 세팅 (주변광은 잔잔하게 유지)
     const ambientLight = new THREE.AmbientLight("#050814", 0.8);
     scene.add(ambientLight);
 
-    // 3. 6개의 무빙 불빛 데이터 (더 넓게 퍼지도록 거리를 50 -> 75로 대폭 확장, 강도도 상향)
     const lightsData = [
       { color: "#0ea5e9", intensity: 65, distance: 75, speedX: 0.4, speedY: 0.25, ampX: 12, ampY: 4.5, offset: 0 },  // Sky Blue
       { color: "#a855f7", intensity: 65, distance: 75, speedX: 0.3, speedY: 0.4, ampX: 11, ampY: 4, offset: 2 },   // Purple
@@ -45,25 +41,24 @@ export default function HeroSection() {
 
     lightsData.forEach((data) => {
       const light = new THREE.PointLight(data.color, data.intensity, data.distance);
-      // z값을 4.5로 다시 뒤로 빼서 배경 평면에 빛이 스포트라이트처럼 맺히지 않고 은은하게 퍼지게 만듭니다.
+      
       light.position.set(0, 0, 4.5); 
       scene.add(light);
       pointLights.push(light);
     });
 
-    // 4. 빛을 부드럽고 흐리게 분산시켜 줄 초대형 무광 백드롭
+  
     const geometry = new THREE.PlaneGeometry(65, 50);
     const material = new THREE.MeshStandardMaterial({
       color: 0x050814,
-      roughness: 0.95,       // ★ 거칠기를 다시 0.95로 대폭 올려 빛의 동그란 테두리를 흐릿하게 뭉개버립니다.
-      metalness: 0.0,        // 반사광을 없애 그라데이션이 스모그처럼 소프트해집니다.
+      roughness: 0.95,       
+      metalness: 0.0,        
     });
 
     const backdrop = new THREE.Mesh(geometry, material);
     backdrop.position.set(0, 0, 0);
     scene.add(backdrop);
 
-    // 5. 애니메이션 루프 (넓은 반경으로 부드러운 교차 무빙)
     let animationFrameId: number;
     const clock = new THREE.Clock();
 
@@ -76,7 +71,6 @@ export default function HeroSection() {
         const data = lightsData[index];
         const t = elapsedTime + data.offset;
 
-        // 화면 밖 여백까지 부드럽게 감싸안고 지나가도록 궤적 반경 유지
         light.position.x = Math.sin(t * data.speedX) * data.ampX;
         light.position.y = Math.cos(t * data.speedY) * data.ampY;
       });
