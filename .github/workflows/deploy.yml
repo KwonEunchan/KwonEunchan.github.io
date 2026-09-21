@@ -1,0 +1,107 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      posts: ${{ steps.changes.outputs.posts }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - id: changes
+        name: Detect changed posts
+        env:
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+        run: |
+          if git rev-parse HEAD~1 >/dev/null 2>&1; then
+            files=$(git diff --name-only --diff-filter=AMR HEAD~1 HEAD -- content/posts | grep '\.md$' || true)
+          else
+            files=$(ls content/posts/*.md 2>/dev/null || true)
+          fi
+          slugs=$(echo "$files" | sed -n 's#^content/posts/\(.*\)\.md$#\1#p' | paste -sd, -)
+          echo "posts=$slugs" >> "$GITHUB_OUTPUT"
+          {
+            echo "### $(printf '%s' "${COMMIT_MSG:-Manual deploy}" | head -n1)"
+            if [ -n "$slugs" ]; then
+              echo ""
+              echo "$files" | sed 's/^/- /'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            package.json
+
+      - id: pages
+        uses: actions/configure-pages@v5
+
+      - uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: next-${{ runner.os }}-${{ hashFiles('package-lock.json', 'package.json') }}-${{ hashFiles('src/**', 'content/**') }}
+          restore-keys: |
+            next-${{ runner.os }}-${{ hashFiles('package-lock.json', 'package.json') }}-
+
+      - name: Install
+        run: if [ -f package-lock.json ]; then npm ci; else npm install; fi
+
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Wait for published posts
+        if: needs.build.outputs.posts != ''
+        env:
+          BASE_URL: ${{ steps.deployment.outputs.page_url }}
+          POSTS: ${{ needs.build.outputs.posts }}
+        run: |
+          IFS=',' read -ra slugs <<< "$POSTS"
+          for slug in "${slugs[@]}"; do
+            url="${BASE_URL%/}/posts/${slug}/"
+            for i in $(seq 1 20); do
+              code=$(curl -s -o /dev/null -w '%{http_code}' "$url?t=$(date +%s)")
+              if [ "$code" = "200" ]; then
+                echo "- [${slug}](${url})" >> "$GITHUB_STEP_SUMMARY"
+                break
+              fi
+              sleep 6
+            done
+            if [ "$code" != "200" ]; then
+              echo "::warning::${url} returned ${code}"
+            fi
+          done
